@@ -1,0 +1,19 @@
+// index.js
+
+const express = require('express');
+const math = require('mathjs');
+
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  // Perform a math operation (e.g., square root)
+  const result = math.sqrt(16);
+
+  // Send the result to the user in the response
+  res.send(`Square root of 16 is: ${result}`);
+});
+
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});
